@@ -1,16 +1,17 @@
 /**
- * Agent Kit Catalog — enhancement layer.
+ * Agent Kit Catalog — enhancement layer v2.
  *
- * Принцип: ВСЕ карточки уже отрисованы в HTML (SSR).
- * Этот скрипт ТОЛЬКО:
- *   1. Делает счётчики в hero анимированными
+ * Контент уже отрендерен в HTML (SSR).
+ * Этот скрипт:
+ *   1. Анимирует счётчики в hero
  *   2. Переключает табы (MCP / Skills / Plugins) — показывает/скрывает grid-ы
- *   3. Фильтрует карточки по категориям (через CSS-классы)
- *   4. Делает живой поиск
- *   5. Smooth-scroll по якорям
+ *   3. Фильтрует карточки по категориям
+ *   4. Живой поиск
+ *   5. Обновляет results-bar (счётчик + кнопка сброса)
+ *   6. Smooth scroll по якорям
+ *   7. Empty state когда ничего не найдено
  *
- * Если JS не выполнится (Telegram WebApp, NoScript, мобильный баг) —
- * контент всё равно виден.
+ * Без JS контент всё равно виден (все карточки в HTML).
  */
 
 (function () {
@@ -30,7 +31,7 @@
     try {
       bindEvents();
       animateStats();
-      applyFilters(); // начальное применение (всё видно)
+      applyFilters(); // начальное состояние
     } catch (e) {
       console.error('[AKC] init failed:', e);
     }
@@ -61,7 +62,7 @@
 
   // ===== Filter logic =====
   function applyFilters() {
-    // Какие grid-ы показывать (в зависимости от таба)
+    // 1. Какой grid показывать
     var grids = {
       mcps:    $('#mcps-grid'),
       skills:  $('#skills-grid'),
@@ -69,10 +70,11 @@
     };
     Object.keys(grids).forEach(function (key) {
       if (!grids[key]) return;
-      grids[key].classList.toggle('hidden', key !== state.activeTab);
+      var isActive = key === state.activeTab;
+      grids[key].classList.toggle('hidden', !isActive);
     });
 
-    // Карточки внутри активного grid-а фильтруем
+    // 2. Фильтруем карточки в активном grid-е
     var activeGrid = grids[state.activeTab];
     if (!activeGrid) return;
 
@@ -80,7 +82,7 @@
     var visibleCount = 0;
     var q = state.query.toLowerCase().trim();
 
-    cards.forEach(function (card) {
+    cards.forEach(function (card, idx) {
       var cat = card.dataset.category || '';
       var search = (card.dataset.search || '').toLowerCase();
 
@@ -89,17 +91,52 @@
 
       var show = matchesCat && matchesQuery;
       card.classList.toggle('hidden', !show);
-      if (show) visibleCount++;
+      if (show) {
+        visibleCount++;
+        // Stagger animation
+        card.style.setProperty('--i', idx);
+      }
     });
 
-    // Обновляем счётчик "найдено"
-    var counter = $('#results-count');
-    if (counter) {
-      counter.textContent = visibleCount;
-      counter.style.display = '';
-    }
+    // 3. Обновляем results-bar
+    var countEl = $('#results-count');
     var totalEl = $('#results-total');
+    var resetBtn = $('#results-reset');
+    var bar = $('#results-bar');
+
+    if (countEl) countEl.textContent = visibleCount;
     if (totalEl) totalEl.textContent = cards.length;
+
+    // Empty state
+    var existingEmpty = activeGrid.querySelector('.empty-state');
+    if (existingEmpty) existingEmpty.remove();
+
+    if (visibleCount === 0 && cards.length > 0) {
+      var empty = document.createElement('div');
+      empty.className = 'empty-state';
+      empty.innerHTML =
+        '<div class="empty-state-icon">🔍</div>' +
+        '<h3>Ничего не найдено</h3>' +
+        '<p>Попробуй другой запрос или сбрось фильтры</p>' +
+        '<button class="results-bar-reset" onclick="document.getElementById(\'results-reset\').click()">✕ Сбросить фильтры</button>';
+      activeGrid.appendChild(empty);
+    }
+
+    // Кнопка сброса — показывать только если есть активные фильтры
+    var hasFilters = state.activeCat !== 'all' || state.query.length > 0;
+    if (resetBtn) resetBtn.classList.toggle('hidden', !hasFilters);
+    if (bar) bar.classList.toggle('hidden', cards.length === 0 && state.activeTab !== 'mcps');
+  }
+
+  function resetFilters() {
+    state.activeCat = 'all';
+    state.query = '';
+    var searchInput = $('#search');
+    if (searchInput) searchInput.value = '';
+    $$('#cats .cat').forEach(function (c) {
+      c.classList.toggle('active', c.dataset.cat === 'all');
+    });
+    applyFilters();
   }
 
   // ===== Events =====
@@ -118,7 +155,6 @@
         $$('#tabs .nav-tab', tabs).forEach(function (t) {
           t.classList.toggle('active', t === tab);
         });
-        // Сбрасываем активную категорию
         $$('#cats .cat').forEach(function (c) {
           c.classList.toggle('active', c.dataset.cat === 'all');
         });
@@ -151,6 +187,12 @@
           applyFilters();
         }, 120);
       });
+    }
+
+    // Reset button
+    var resetBtn = $('#results-reset');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', resetFilters);
     }
 
     // Smooth scroll
