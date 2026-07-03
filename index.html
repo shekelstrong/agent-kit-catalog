@@ -226,9 +226,27 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="scripts/data.js"></script>
-  <script src="scripts/app.js"></script>
+  <!-- Scripts (defer гарантирует порядок data.js → app.js и выполнение после парсинга DOM) -->
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/app.js" defer></script>
+
+  <!-- Inline fallback: если JS не подгрузился за 4с — показать сообщение -->
+  <noscript>
+    <div style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#0a0a0a;color:#fff;padding:20px;text-align:center;z-index:9999;">
+      <div>
+        <h2>Включи JavaScript</h2>
+        <p>Каталог работает на JS. Включи его в настройках браузера и обнови страницу.</p>
+      </div>
+    </div>
+  </noscript>
+  <script>
+    setTimeout(function(){
+      var grid = document.getElementById('grid');
+      if (grid && grid.children.length === 0) {
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:#8b949e;"><p>Карточки не загрузились. Попробуй обновить страницу (Ctrl+Shift+R).</p><p style="margin-top:12px;font-size:13px;">Если не поможет — открой в обычном браузере, не внутри Telegram.</p></div>';
+      }
+    }, 4000);
+  </script>
 
 </body>
 </html>

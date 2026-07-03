@@ -19,7 +19,29 @@
   const $ = (sel) => document.querySelector(sel);
   const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
-  // ===== Init =====
+  // ===== Init (ждём готовности DOM и данных) =====
+  function bootstrap() {
+    if (typeof window.AKC_DATA === 'undefined') {
+      // data.js ещё не загрузился — подождём
+      return setTimeout(bootstrap, 30);
+    }
+    try {
+      init();
+    } catch (e) {
+      console.error('[AKC] init failed:', e);
+      var grid = document.getElementById('grid');
+      if (grid) {
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:#ff7b72;"><p>⚠️ Ошибка рендера: ' + (e.message || e) + '</p></div>';
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootstrap);
+  } else {
+    bootstrap();
+  }
+
   function init() {
     renderStats();
     renderTabs();
@@ -323,10 +345,5 @@
     return many;
   }
 
-  // ===== Boot =====
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+  // boot вызывается выше (см. bootstrap + DOMContentLoaded)
 })();
