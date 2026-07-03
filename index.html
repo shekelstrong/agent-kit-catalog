@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Kit Catalog — MCP, Skills, Plugins для ИИ-агента</title>
+  <meta name="description" content="Каталог готовых компонентов для создания своего ИИ-агента: 22 MCP-сервера, 156+ скиллов, 16 плагинов. Open source, MIT, production-ready.">
+  <meta name="keywords" content="MCP, AI-агент, Hermes, LLM, Telegram-бот, freelance, design system, инструкции">
+  <meta name="author" content="Vasiliy Nedopekin @shekelstrong">
+  <meta property="og:title" content="Agent Kit Catalog — MCP, Skills, Plugins для ИИ-агента">
+  <meta property="og:description" content="Готовые компоненты для создания своего ИИ-агента. 22 MCP, 156+ скиллов, 16 плагинов.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237ee787'/%3E%3Cstop offset='1' stop-color='%2379c0ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='56' font-weight='800' text-anchor='middle' fill='%230a0a0a' font-family='Inter,sans-serif'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="nav-logo-icon">A</span>
+        <span>Agent Kit</span>
+      </a>
+      <div class="nav-links">
+        <a href="#mcps" class="nav-link active">Каталог</a>
+        <a href="#how" class="nav-link">Как использовать</a>
+        <a href="#about" class="nav-link">О каталоге</a>
+      </div>
+      <a href="https://github.com/shekelstrong" target="_blank" rel="noopener" class="nav-cta">
+        GitHub →
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span>Открытый каталог · MIT · Поддерживается сообществом</span>
+      </div>
+      <h1>
+        Всё что нужно<br>
+        <span class="gradient">для своего ИИ-агента</span>
+      </h1>
+      <p>
+        MCP-серверы, скиллы и плагины для Hermes Agent и любых других платформ.
+        Production-ready компоненты с реальным кодом, тестами и CI.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#mcps" class="btn btn-primary">
+          Открыть каталог
+          <span>→</span>
+        </a>
+        <a href="https://github.com/nousresearch/hermes-agent" target="_blank" rel="noopener" class="btn btn-secondary">
+          Про Hermes Agent
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-num" data-count="22">22</span>
+          <span class="stat-label">MCP-серверов</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="114">114</span>
+          <span class="stat-label">MCP-инструментов</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="156">156</span>
+          <span class="stat-label">Скиллов</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="16">16</span>
+          <span class="stat-label">Плагинов</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="9">9</span>
+          <span class="stat-label">Категорий</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Catalog ===== -->
+  <section class="section" id="mcps">
+    <div class="container">
+
+      <div class="section-header">
+        <div>
+          <div class="section-eyebrow">Каталог</div>
+          <h2 class="section-title">MCP · Skills · Plugins</h2>
+          <p class="section-sub">Кликни на карточку — откроется репозиторий на GitHub</p>
+        </div>
+        <div id="tabs" class="cats"></div>
+      </div>
+
+      <!-- Search + Categories -->
+      <div class="controls">
+        <div class="search-wrap">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" id="search" class="search-input"
+                 placeholder="Поиск по названию, тегам, описанию...">
+        </div>
+        <div id="cats" class="cats"></div>
+      </div>
+
+      <div id="content"></div>
+
+    </div>
+  </section>
+
+  <!-- ===== How to use ===== -->
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-eyebrow">Как использовать</div>
+          <h2 class="section-title">3 шага до запуска</h2>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <div class="card-title">1. Выбери компонент</div>
+          <div class="card-desc">Используй поиск и фильтры. Нажми на карточку чтобы открыть GitHub-репозиторий с кодом и документацией.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">⬇️</div>
+          <div class="card-title">2. Склонируй и запусти</div>
+          <div class="card-desc">
+            <code style="background: var(--bg-elev-2); padding: 2px 6px; border-radius: 4px; font-size: 12px;">git clone ...</code>
+            →
+            <code style="background: var(--bg-elev-2); padding: 2px 6px; border-radius: 4px; font-size: 12px;">pip install -r requirements.txt</code>
+            <br><br>
+            У каждого MCP есть README с инструкцией, примеры и setup-скриптами.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <div class="card-title">3. Подключи к агенту</div>
+          <div class="card-desc">
+            MCP работает через stdio. Добавь его в <code style="background: var(--bg-elev-2); padding: 2px 6px; border-radius: 4px; font-size: 12px;">config.yaml</code>
+            своего Hermes Agent или другой платформы. Tools готовы к использованию.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="cta">
+        <div class="section-eyebrow">Открытый проект</div>
+        <h2>Сделано на Hermes Agent</h2>
+        <p>
+          Все MCP-серверы этого каталога написаны с помощью Hermes Agent от Nous Research —
+          открытой платформы для AI-агентов. Поддерживается сообществом, MIT-лицензия.
+        </p>
+        <div class="hero-cta-row" style="margin-bottom: 0;">
+          <a href="https://github.com/nousresearch/hermes-agent" target="_blank" rel="noopener" class="btn btn-primary">
+            Изучить Hermes Agent →
+          </a>
+          <a href="https://github.com/shekelstrong" target="_blank" rel="noopener" class="btn btn-secondary">
+            Все репозитории автора
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="nav-logo">
+            <span class="nav-logo-icon">A</span>
+            <span>Agent Kit Catalog</span>
+          </div>
+          <p class="footer-brand-text">
+            Открытый каталог компонентов для создания AI-агентов.
+            Все репозитории на GitHub под MIT-лицензией.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Каталог</h4>
+          <a href="#mcps">Все компоненты</a>
+          <a href="#mcps">MCP-серверы</a>
+          <a href="#mcps">Скиллы</a>
+          <a href="#mcps">Плагины</a>
+        </div>
+        <div class="footer-col">
+          <h4>Ресурсы</h4>
+          <a href="https://github.com/nousresearch/hermes-agent" target="_blank" rel="noopener">Hermes Agent</a>
+          <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener">Model Context Protocol</a>
+          <a href="https://openrouter.ai" target="_blank" rel="noopener">OpenRouter</a>
+        </div>
+        <div class="footer-col">
+          <h4>Автор</h4>
+          <a href="https://github.com/shekelstrong" target="_blank" rel="noopener">@shekelstrong</a>
+          <a href="https://t.me/nedopekin" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://github.com/shekelstrong?tab=repositories" target="_blank" rel="noopener">Все репо</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>MIT © 2026 Vasiliy Nedopekin</div>
+        <div>Built with Hermes Agent · No frameworks, just HTML+CSS+JS</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/data.js"></script>
+  <script src="scripts/app.js"></script>
+
+</body>
+</html>
