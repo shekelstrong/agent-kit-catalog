@@ -103,7 +103,11 @@
           <h2 class="section-title">MCP · Skills · Plugins</h2>
           <p class="section-sub">Кликни на карточку — откроется репозиторий на GitHub</p>
         </div>
-        <div id="tabs" class="cats"></div>
+        <div id="tabs" class="cats">
+<button class="nav-tab active" data-tab="mcps">MCP <span class="nav-tab-count">22</span></button>
+<button class="nav-tab" data-tab="skills">Скиллы <span class="nav-tab-count">120+</span></button>
+<button class="nav-tab" data-tab="plugins">Плагины <span class="nav-tab-count">16</span></button>
+        </div>
       </div>
 
       <!-- Search + Categories -->
@@ -116,10 +120,547 @@
           <input type="search" id="search" class="search-input"
                  placeholder="Поиск по названию, тегам, описанию...">
         </div>
-        <div id="cats" class="cats"></div>
+        <div id="cats" class="cats">
+<button class="cat active" data-cat="all">🗂 Все <span class="cat-count">22</span></button>
+<button class="cat" data-cat="ai">🤖 AI-агенты <span class="cat-count">5</span></button>
+<button class="cat" data-cat="freelance">💰 Freelance <span class="cat-count">4</span></button>
+<button class="cat" data-cat="telegram">✈️ Telegram <span class="cat-count">2</span></button>
+<button class="cat" data-cat="code">💻 Code <span class="cat-count">3</span></button>
+<button class="cat" data-cat="deploy">🚀 Deploy <span class="cat-count">3</span></button>
+<button class="cat" data-cat="docs">📄 Документы <span class="cat-count">3</span></button>
+<button class="cat" data-cat="design">🎨 Design <span class="cat-count">1</span></button>
+<button class="cat" data-cat="ru-market">🇷🇺 РФ рынок <span class="cat-count">1</span></button>
+        </div>
       </div>
 
-      <div id="content"></div>
+      <div id="content">
+        <div class="grid" id="mcps-grid">
+<a href="https://github.com/shekelstrong/kwork-gig-studio" target="_blank" rel="noopener" class="card card-featured" data-category="freelance" data-search="kwork gig studio единый mcp для создания и публикации кворков на kwork: ниша → обложка → текст → faq → публикация. open source, mit. kwork фриланс ai-аудит обложка vision-чекер">
+  <div class="card-header">
+    <span class="card-icon">🎨</span>
+    <span class="card-category">freelance</span>
+    <span class="card-badge">★</span>
+  </div>
+  <h3 class="card-title">Kwork Gig Studio</h3>
+  <p class="card-desc">Единый MCP для создания и публикации кворков на Kwork: ниша → обложка → текст → FAQ → публикация. Open source, MIT.</p>
+  <div class="card-tags"><span class="card-tag">kwork</span><span class="card-tag">фриланс</span><span class="card-tag">AI-аудит</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/hh-apply-suite" target="_blank" rel="noopener" class="card" data-category="freelance" data-search="hh apply suite парсинг вакансий hh.ru, ресёрч github, адаптация сопровода под ats, ответы на 12 типовых hr-вопросов. hh.ru vacancy ats cover-letter hr">
+  <div class="card-header">
+    <span class="card-icon">💼</span>
+    <span class="card-category">freelance</span>
+    
+  </div>
+  <h3 class="card-title">HH Apply Suite</h3>
+  <p class="card-desc">Парсинг вакансий hh.ru, ресёрч GitHub, адаптация сопровода под ATS, ответы на 12 типовых HR-вопросов.</p>
+  <div class="card-tags"><span class="card-tag">hh.ru</span><span class="card-tag">vacancy</span><span class="card-tag">ATS</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/freelance-launcher" target="_blank" rel="noopener" class="card" data-category="freelance" data-search="freelance launcher запуск фрилансера с нуля. портфолио + кворки + постинг в tenchat/vc/youtube. готовые шаблоны html. фриланс портфолио tenchat vc youtube">
+  <div class="card-header">
+    <span class="card-icon">🚀</span>
+    <span class="card-category">freelance</span>
+    
+  </div>
+  <h3 class="card-title">Freelance Launcher</h3>
+  <p class="card-desc">Запуск фрилансера с нуля. Портфолио + кворки + постинг в TenChat/VC/YouTube. Готовые шаблоны HTML.</p>
+  <div class="card-tags"><span class="card-tag">фриланс</span><span class="card-tag">портфолио</span><span class="card-tag">TenChat</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/freelance-revenue-kit" target="_blank" rel="noopener" class="card" data-category="freelance" data-search="freelance revenue kit стратегии дохода: план первого дохода за 7 дней, параллельные каналы (kwork/plati/lolzteam), экстренные стратегии. доход kwork plati lolzteam tenchat">
+  <div class="card-header">
+    <span class="card-icon">💰</span>
+    <span class="card-category">freelance</span>
+    
+  </div>
+  <h3 class="card-title">Freelance Revenue Kit</h3>
+  <p class="card-desc">Стратегии дохода: план первого дохода за 7 дней, параллельные каналы (Kwork/Plati/LolzTeam), экстренные стратегии.</p>
+  <div class="card-tags"><span class="card-tag">доход</span><span class="card-tag">Kwork</span><span class="card-tag">Plati</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 4 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/ai-agent-factory" target="_blank" rel="noopener" class="card card-featured" data-category="ai" data-search="ai agent factory конструктор ai-агентов через n8n. описание задачи → n8n workflow → деплой → мониторинг. 3 готовых шаблона. ai-agent n8n workflow openrouter">
+  <div class="card-header">
+    <span class="card-icon">🤖</span>
+    <span class="card-category">ai</span>
+    <span class="card-badge">★</span>
+  </div>
+  <h3 class="card-title">AI Agent Factory</h3>
+  <p class="card-desc">Конструктор AI-агентов через n8n. Описание задачи → n8n workflow → деплой → мониторинг. 3 готовых шаблона.</p>
+  <div class="card-tags"><span class="card-tag">AI-agent</span><span class="card-tag">n8n</span><span class="card-tag">workflow</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+ + n8n</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/agent-to-prod" target="_blank" rel="noopener" class="card" data-category="ai" data-search="agent to prod ai-агент от тз до production. системный дизайн, mvp за 4 недели, чек-лист прод-деплоя, мониторинг, пост-мортем. production monitoring scale post-mortem">
+  <div class="card-header">
+    <span class="card-icon">⚡</span>
+    <span class="card-category">ai</span>
+    
+  </div>
+  <h3 class="card-title">Agent to Prod</h3>
+  <p class="card-desc">AI-агент от ТЗ до production. Системный дизайн, MVP за 4 недели, чек-лист прод-деплоя, мониторинг, пост-мортем.</p>
+  <div class="card-tags"><span class="card-tag">production</span><span class="card-tag">monitoring</span><span class="card-tag">scale</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 6 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/llm-reliability-kit" target="_blank" rel="noopener" class="card" data-category="ai" data-search="llm reliability kit надёжность llm: парсинг ответов (json/xml/text), fallback-цепочки провайдеров, выбор по cost/latency/quality, retry-стратегии. llm fallback retry openai anthropic">
+  <div class="card-header">
+    <span class="card-icon">🛡️</span>
+    <span class="card-category">ai</span>
+    
+  </div>
+  <h3 class="card-title">LLM Reliability Kit</h3>
+  <p class="card-desc">Надёжность LLM: парсинг ответов (JSON/XML/text), fallback-цепочки провайдеров, выбор по cost/latency/quality, retry-стратегии.</p>
+  <div class="card-tags"><span class="card-tag">LLM</span><span class="card-tag">fallback</span><span class="card-tag">retry</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/llm-unit-econ" target="_blank" rel="noopener" class="card" data-category="ai" data-search="llm unit economics юнит-экономика llm-продукта. стоимость токенов 10 моделей, gross/net margin, break-even, сравнение 9 провайдеров, pricing table. юнит-экономика tokens margin провайдеры">
+  <div class="card-header">
+    <span class="card-icon">📊</span>
+    <span class="card-category">ai</span>
+    
+  </div>
+  <h3 class="card-title">LLM Unit Economics</h3>
+  <p class="card-desc">Юнит-экономика LLM-продукта. Стоимость токенов 10 моделей, gross/net margin, break-even, сравнение 9 провайдеров, pricing table.</p>
+  <div class="card-tags"><span class="card-tag">юнит-экономика</span><span class="card-tag">tokens</span><span class="card-tag">margin</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/hermes-memory-pro" target="_blank" rel="noopener" class="card" data-category="ai" data-search="hermes memory pro премиум memory layer: сжатие контекста, rag-поиск по кодбазе, knowledge base, observations, wiki-builder. memory rag knowledge-base wiki">
+  <div class="card-header">
+    <span class="card-icon">🧠</span>
+    <span class="card-category">ai</span>
+    
+  </div>
+  <h3 class="card-title">Hermes Memory Pro</h3>
+  <p class="card-desc">Премиум memory layer: сжатие контекста, RAG-поиск по кодбазе, knowledge base, observations, wiki-builder.</p>
+  <div class="card-tags"><span class="card-tag">memory</span><span class="card-tag">RAG</span><span class="card-tag">knowledge-base</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 7 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/telegram-suite" target="_blank" rel="noopener" class="card card-featured" data-category="telegram" data-search="telegram suite telegram-боты (aiogram 3) и mini apps. шаблоны, деплой через docker, отладка webapp, форматирование, навигация по категориям. telegram aiogram mini app docker">
+  <div class="card-header">
+    <span class="card-icon">✈️</span>
+    <span class="card-category">telegram</span>
+    <span class="card-badge">★</span>
+  </div>
+  <h3 class="card-title">Telegram Suite</h3>
+  <p class="card-desc">Telegram-боты (aiogram 3) и Mini Apps. Шаблоны, деплой через Docker, отладка WebApp, форматирование, навигация по категориям.</p>
+  <div class="card-tags"><span class="card-tag">telegram</span><span class="card-tag">aiogram</span><span class="card-tag">Mini App</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+ + aiogram 3</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/vk-tg-bridge" target="_blank" rel="noopener" class="card" data-category="telegram" data-search="vk-tg bridge мост vk → telegram. парсинг постов vk api, фильтрация, форматирование html, end-to-end пайплайн с отправкой. vk telegram мост парсинг">
+  <div class="card-header">
+    <span class="card-icon">🌉</span>
+    <span class="card-category">telegram</span>
+    
+  </div>
+  <h3 class="card-title">VK-TG Bridge</h3>
+  <p class="card-desc">Мост VK → Telegram. Парсинг постов VK API, фильтрация, форматирование HTML, end-to-end пайплайн с отправкой.</p>
+  <div class="card-tags"><span class="card-tag">VK</span><span class="card-tag">Telegram</span><span class="card-tag">мост</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 4 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/engineering-playbook" target="_blank" rel="noopener" class="card" data-category="code" data-search="engineering playbook tdd red-green-refactor, 4-phase debugging, ddd ubiquitous language, архитектурное ревью, prd → github issues. tdd debugging ddd prd refactoring">
+  <div class="card-header">
+    <span class="card-icon">🔧</span>
+    <span class="card-category">code</span>
+    
+  </div>
+  <h3 class="card-title">Engineering Playbook</h3>
+  <p class="card-desc">TDD red-green-refactor, 4-phase debugging, DDD ubiquitous language, архитектурное ревью, PRD → GitHub issues.</p>
+  <div class="card-tags"><span class="card-tag">TDD</span><span class="card-tag">debugging</span><span class="card-tag">DDD</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+ + TypeScript</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/code-craft-suite" target="_blank" rel="noopener" class="card" data-category="code" data-search="code craft suite качество кода: 4-phase debugging, планирование фичи, декомпозиция задач, рефакторинг, kb-аудит, suggestions по упрощению. debugging refactoring kb-audit simplify">
+  <div class="card-header">
+    <span class="card-icon">✨</span>
+    <span class="card-category">code</span>
+    
+  </div>
+  <h3 class="card-title">Code Craft Suite</h3>
+  <p class="card-desc">Качество кода: 4-phase debugging, планирование фичи, декомпозиция задач, рефакторинг, KB-аудит, suggestions по упрощению.</p>
+  <div class="card-tags"><span class="card-tag">debugging</span><span class="card-tag">refactoring</span><span class="card-tag">KB-audit</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 6 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/repo-auditor" target="_blank" rel="noopener" class="card" data-category="code" data-search="repo auditor аудит github-репозиториев: структура, качество кода (тесты/ci/docs), честность readme, verdict (use/caution/avoid). github audit quality honesty">
+  <div class="card-header">
+    <span class="card-icon">🔍</span>
+    <span class="card-category">code</span>
+    
+  </div>
+  <h3 class="card-title">Repo Auditor</h3>
+  <p class="card-desc">Аудит GitHub-репозиториев: структура, качество кода (тесты/CI/docs), честность README, verdict (use/caution/avoid).</p>
+  <div class="card-tags"><span class="card-tag">github</span><span class="card-tag">audit</span><span class="card-tag">quality</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/deploy-stack" target="_blank" rel="noopener" class="card" data-category="deploy" data-search="deploy stack деплой python-сервисов и фронтендов: vps (docker + github actions), vercel, layero. готовые dockerfile и vercel.json. docker github actions vps vercel layero">
+  <div class="card-header">
+    <span class="card-icon">🚀</span>
+    <span class="card-category">deploy</span>
+    
+  </div>
+  <h3 class="card-title">Deploy Stack</h3>
+  <p class="card-desc">Деплой Python-сервисов и фронтендов: VPS (Docker + GitHub Actions), Vercel, Layero. Готовые Dockerfile и vercel.json.</p>
+  <div class="card-tags"><span class="card-tag">Docker</span><span class="card-tag">GitHub Actions</span><span class="card-tag">VPS</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 6 tools</span><span class="card-meta-item">Python 3.11+ + Docker</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/landing-launcher" target="_blank" rel="noopener" class="card" data-category="deploy" data-search="landing launcher лендинг от тз до деплоя. ресёрч конкурентов, copy (3 тона: professional/casual/bold), layout (4 типа), деплой на vercel/layero. landing vercel layero copy layout">
+  <div class="card-header">
+    <span class="card-icon">🎯</span>
+    <span class="card-category">deploy</span>
+    
+  </div>
+  <h3 class="card-title">Landing Launcher</h3>
+  <p class="card-desc">Лендинг от ТЗ до деплоя. Ресёрч конкурентов, copy (3 тона: professional/casual/bold), layout (4 типа), деплой на Vercel/Layero.</p>
+  <div class="card-tags"><span class="card-tag">landing</span><span class="card-tag">Vercel</span><span class="card-tag">Layero</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+ + Vite/Next.js</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/infra-security-scan" target="_blank" rel="noopener" class="card" data-category="deploy" data-search="infra security scan security scan инфраструктуры. linux через ssh (ps/ss/passwd/cron), windows через powershell, github org. ioc + report. security linux windows github ioc">
+  <div class="card-header">
+    <span class="card-icon">🛡️</span>
+    <span class="card-category">deploy</span>
+    
+  </div>
+  <h3 class="card-title">Infra Security Scan</h3>
+  <p class="card-desc">Security scan инфраструктуры. Linux через SSH (ps/ss/passwd/cron), Windows через PowerShell, GitHub org. IOC + report.</p>
+  <div class="card-tags"><span class="card-tag">security</span><span class="card-tag">Linux</span><span class="card-tag">Windows</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/doc-factory" target="_blank" rel="noopener" class="card" data-category="docs" data-search="doc factory генерация документов: pdf (cyrillic), docx, pptx, xlsx из markdown. графики через matplotlib, авто-детект кириллицы. pdf docx pptx xlsx cyrillic">
+  <div class="card-header">
+    <span class="card-icon">📄</span>
+    <span class="card-category">docs</span>
+    
+  </div>
+  <h3 class="card-title">Doc Factory</h3>
+  <p class="card-desc">Генерация документов: PDF (cyrillic), DOCX, PPTX, XLSX из markdown. Графики через matplotlib, авто-детект кириллицы.</p>
+  <div class="card-tags"><span class="card-tag">PDF</span><span class="card-tag">DOCX</span><span class="card-tag">PPTX</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 6 tools</span><span class="card-meta-item">Python 3.11+ + reportlab + python-docx</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/youtube-studio" target="_blank" rel="noopener" class="card" data-category="docs" data-search="youtube studio youtube-креатор: транскрипты, сценарии (hook/intro/main/cta), thumbnails, реверс-инжиниринг viral видео, идеи по нише. youtube транскрипт сценарий thumbnail viral">
+  <div class="card-header">
+    <span class="card-icon">🎬</span>
+    <span class="card-category">docs</span>
+    
+  </div>
+  <h3 class="card-title">YouTube Studio</h3>
+  <p class="card-desc">YouTube-креатор: транскрипты, сценарии (hook/intro/main/CTA), thumbnails, реверс-инжиниринг viral видео, идеи по нише.</p>
+  <div class="card-tags"><span class="card-tag">YouTube</span><span class="card-tag">транскрипт</span><span class="card-tag">сценарий</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/visual-studio" target="_blank" rel="noopener" class="card" data-category="docs" data-search="visual studio визуальный контент: p5.js алгоритмический арт, svg/excalidraw диаграммы, ascii-арт, пиксель-арт с ретро-палитрами. p5.js svg excalidraw ascii pixel-art">
+  <div class="card-header">
+    <span class="card-icon">🎨</span>
+    <span class="card-category">docs</span>
+    
+  </div>
+  <h3 class="card-title">Visual Studio</h3>
+  <p class="card-desc">Визуальный контент: p5.js алгоритмический арт, SVG/Excalidraw диаграммы, ASCII-арт, пиксель-арт с ретро-палитрами.</p>
+  <div class="card-tags"><span class="card-tag">p5.js</span><span class="card-tag">SVG</span><span class="card-tag">Excalidraw</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 4 tools</span><span class="card-meta-item">Python 3.11+ + pyfiglet</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/design-system-mcp" target="_blank" rel="noopener" class="card" data-category="design" data-search="design system mcp ui-ревью: 5 направлений критики, design tokens (css/tailwind/scss), wcag a11y, поиск ui-паттернов, спецификация компонентов. ui design-system a11y wcag dieter rams">
+  <div class="card-header">
+    <span class="card-icon">🎭</span>
+    <span class="card-category">design</span>
+    
+  </div>
+  <h3 class="card-title">Design System MCP</h3>
+  <p class="card-desc">UI-ревью: 5 направлений критики, design tokens (CSS/Tailwind/SCSS), WCAG a11y, поиск UI-паттернов, спецификация компонентов.</p>
+  <div class="card-tags"><span class="card-tag">UI</span><span class="card-tag">design-system</span><span class="card-tag">a11y</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 6 tools</span><span class="card-meta-item">Python 3.11+</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+<a href="https://github.com/shekelstrong/ru-ai-saas-template" target="_blank" rel="noopener" class="card" data-category="ru-market" data-search="ru ai saas template архитектурный шаблон ai-saas для рф: supabase + openrouter + layero + юkassa + cryptobot + telegram stars. документы по 152-фз. рф supabase юkassa cryptobot 152-фз">
+  <div class="card-header">
+    <span class="card-icon">🇷🇺</span>
+    <span class="card-category">ru-market</span>
+    
+  </div>
+  <h3 class="card-title">RU AI SaaS Template</h3>
+  <p class="card-desc">Архитектурный шаблон AI-SaaS для РФ: Supabase + OpenRouter + Layero + ЮKassa + Cryptobot + Telegram Stars. Документы по 152-ФЗ.</p>
+  <div class="card-tags"><span class="card-tag">РФ</span><span class="card-tag">Supabase</span><span class="card-tag">ЮKassa</span></div>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 tools</span><span class="card-meta-item">Python 3.11+ + FastAPI + Supabase</span></div>
+  <div class="card-footer"><span class="card-link">→ GitHub</span></div>
+</a>
+        </div>
+      </div>
+
+      <div class="grid hidden" id="skills-grid">
+<div class="card skill-card" data-category="freelance" data-search="kwork создание кворков, обложки, tos, parallel-каналы kwork-gig-studio, kwork-cover-design, kwork-cover-generator, kwork-cover-image, kwork-gig-creation">
+  <div class="card-header">
+    <span class="card-icon">📚</span>
+    <span class="card-category">freelance</span>
+  </div>
+  <h3 class="card-title">Kwork</h3>
+  <p class="card-desc">Создание кворков, обложки, TOS, parallel-каналы</p>
+  <div class="card-meta"><span class="card-meta-item">🔧 7 скиллов</span></div>
+  <div class="card-footer"><span class="card-link" style="font-size:12px;color:var(--text-muted);">kwork-gig-studio, kwork-cover-design, kwork-cover-generator, kwork-cover-image, </span></div>
+</div>
+<div class="card skill-card" data-category="telegram" data-search="telegram aiogram 3, mini apps, деплой, отладка telegram-bot-aiogram, telegram-bot-best-practices, telegram-bot-catalog-navigation, telegram-bot-docker-deploy, telegram-output-style">
+  <div class="card-header">
+    <span class="card-icon">📚</span>
+    <span class="card-category">telegram</span>
+  </div>
+  <h3 class="card-title">Telegram</h3>
+  <p class="card-desc">aiogram 3, Mini Apps, деплой, отладка</p>
+  <div class="card-meta"><span class="card-meta-item">🔧 8 скиллов</span></div>
+  <div class="card-footer"><span class="card-link" style="font-size:12px;color:var(--text-muted);">telegram-bot-aiogram, telegram-bot-best-practices, telegram-bot-catalog-navigati</span></div>
+</div>
+<div class="card skill-card" data-category="freelance" data-search="hh / vacancy парсинг вакансий, ats-сопроводы, ответы hr vacancy-response-writing, cover-letter-tech-vacancy, hh-vacancy-parser, hh-vacancy-cover-letter">
+  <div class="card-header">
+    <span class="card-icon">📚</span>
+    <span class="card-category">freelance</span>
+  </div>
+  <h3 class="card-title">HH / Vacancy</h3>
+  <p class="card-desc">Парсинг вакансий, ATS-сопроводы, ответы HR</p>
+  <div class="card-meta"><span class="card-meta-item">🔧 6 скиллов</span></div>
+  <div class="card-footer"><span class="card-link" style="font-size:12px;color:var(--text-muted);">vacancy-response-writing, cover-letter-tech-vacancy, hh-vacancy-parser, hh-vacan</span></div>
+</div>
+<div class="card skill-card" data-category="ai" data-search="n8n / workflows javascript/python в n8n, expressions, mcp tools n8n-code-javascript, n8n-code-python, n8n-expression-syntax, n8n-mcp-tools-expert, n8n-node-configuration">
+  <div class="card-header">
+    <span class="card-icon">📚</span>
+    <span class="card-category">ai</span>
+  </div>
+  <h3 class="card-title">n8n / Workflows</h3>
+  <p class="card-desc">JavaScript/Python в n8n, expressions, MCP tools</p>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 скиллов</span></div>
+  <div class="card-footer"><span class="card-link" style="font-size:12px;color:var(--text-muted);">n8n-code-javascript, n8n-code-python, n8n-expression-syntax, n8n-mcp-tools-exper</span></div>
+</div>
+<div class="card skill-card" data-category="ai" data-search="ai agents claude code, codex, делегирование задач autonomous-ai-agents, claude-code, codex, supergoal, opencode">
+  <div class="card-header">
+    <span class="card-icon">📚</span>
+    <span class="card-category">ai</span>
+  </div>
+  <h3 class="card-title">AI Agents</h3>
+  <p class="card-desc">Claude Code, Codex, делегирование задач</p>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 скиллов</span></div>
+  <div class="card-footer"><span class="card-link" style="font-size:12px;color:var(--text-muted);">autonomous-ai-agents, claude-code, codex, supergoal, opencode</span></div>
+</div>
+<div class="card skill-card" data-category="design" data-search="designer (60+) ui/ux, design tokens, a11y, motion, паттерны ui-design, ux-design, color-system, typography-scale, accessibility-audit">
+  <div class="card-header">
+    <span class="card-icon">📚</span>
+    <span class="card-category">design</span>
+  </div>
+  <h3 class="card-title">Designer (60+)</h3>
+  <p class="card-desc">UI/UX, design tokens, a11y, motion, паттерны</p>
+  <div class="card-meta"><span class="card-meta-item">🔧 60 скиллов</span></div>
+  <div class="card-footer"><span class="card-link" style="font-size:12px;color:var(--text-muted);">ui-design, ux-design, color-system, typography-scale, accessibility-audit</span></div>
+</div>
+<div class="card skill-card" data-category="code" data-search="matt pocock typescript tdd, domain modeling, prd, рефакторинг ask-matt, codebase-design, diagnosing-bugs, domain-modeling, implement">
+  <div class="card-header">
+    <span class="card-icon">📚</span>
+    <span class="card-category">code</span>
+  </div>
+  <h3 class="card-title">Matt Pocock TypeScript</h3>
+  <p class="card-desc">TDD, domain modeling, PRD, рефакторинг</p>
+  <div class="card-meta"><span class="card-meta-item">🔧 15 скиллов</span></div>
+  <div class="card-footer"><span class="card-link" style="font-size:12px;color:var(--text-muted);">ask-matt, codebase-design, diagnosing-bugs, domain-modeling, implement</span></div>
+</div>
+<div class="card skill-card" data-category="ai" data-search="llm ops парсинг, inference, провайдеры llm-response-parsing, llm-inference-ops, gen-ai-provider-ops, huggingface-hub">
+  <div class="card-header">
+    <span class="card-icon">📚</span>
+    <span class="card-category">ai</span>
+  </div>
+  <h3 class="card-title">LLM Ops</h3>
+  <p class="card-desc">Парсинг, inference, провайдеры</p>
+  <div class="card-meta"><span class="card-meta-item">🔧 4 скиллов</span></div>
+  <div class="card-footer"><span class="card-link" style="font-size:12px;color:var(--text-muted);">llm-response-parsing, llm-inference-ops, gen-ai-provider-ops, huggingface-hub</span></div>
+</div>
+<div class="card skill-card" data-category="ai" data-search="memory & knowledge сжатие контекста, rag, kb, wiki headroom, codebase-memory-mcp, kb-brain-restructure, llm-wiki, obsidian">
+  <div class="card-header">
+    <span class="card-icon">📚</span>
+    <span class="card-category">ai</span>
+  </div>
+  <h3 class="card-title">Memory & Knowledge</h3>
+  <p class="card-desc">Сжатие контекста, RAG, KB, wiki</p>
+  <div class="card-meta"><span class="card-meta-item">🔧 5 скиллов</span></div>
+  <div class="card-footer"><span class="card-link" style="font-size:12px;color:var(--text-muted);">headroom, codebase-memory-mcp, kb-brain-restructure, llm-wiki, obsidian</span></div>
+</div>
+<div class="card skill-card" data-category="telegram" data-search="telegram-output-style стиль ответов для telegram (компактные списки) telegram-output-style">
+  <div class="card-header">
+    <span class="card-icon">📚</span>
+    <span class="card-category">telegram</span>
+  </div>
+  <h3 class="card-title">Telegram-Output-Style</h3>
+  <p class="card-desc">Стиль ответов для Telegram (компактные списки)</p>
+  <div class="card-meta"><span class="card-meta-item">🔧 1 скиллов</span></div>
+  <div class="card-footer"><span class="card-link" style="font-size:12px;color:var(--text-muted);">telegram-output-style</span></div>
+</div>
+<div class="card skill-card" data-category="design" data-search="kwork cover design обложки через ai (openrouter vision) kwork-cover-design, kwork-cover-generator, kwork-cover-image, kwork-tos-rules">
+  <div class="card-header">
+    <span class="card-icon">📚</span>
+    <span class="card-category">design</span>
+  </div>
+  <h3 class="card-title">Kwork Cover Design</h3>
+  <p class="card-desc">Обложки через AI (OpenRouter vision)</p>
+  <div class="card-meta"><span class="card-meta-item">🔧 4 скиллов</span></div>
+  <div class="card-footer"><span class="card-link" style="font-size:12px;color:var(--text-muted);">kwork-cover-design, kwork-cover-generator, kwork-cover-image, kwork-tos-rules</span></div>
+</div>
+      </div>
+
+      <div class="grid hidden" id="plugins-grid">
+<div class="card plugin-card" data-search="designer-skills ui/ux design system, критики, паттерны">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">designer-skills</h3>
+  <p class="card-desc">UI/UX design system, критики, паттерны</p>
+  <div class="card-meta"><span class="card-meta-item">📦 60 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="matt-pocock typescript engineering: tdd, ddd, prd, triage">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">matt-pocock</h3>
+  <p class="card-desc">TypeScript engineering: TDD, DDD, PRD, triage</p>
+  <div class="card-meta"><span class="card-meta-item">📦 15 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="autonomous-ai-agents claude code, codex, opencode, супер-цели">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">autonomous-ai-agents</h3>
+  <p class="card-desc">Claude Code, Codex, OpenCode, супер-цели</p>
+  <div class="card-meta"><span class="card-meta-item">📦 5 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="mcp mcp servers (16 плагинов настроены)">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">mcp</h3>
+  <p class="card-desc">MCP servers (16 плагинов настроены)</p>
+  <div class="card-meta"><span class="card-meta-item">📦 1 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="llm-response-parsing json/xml/text парсинг ответов llm">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">llm-response-parsing</h3>
+  <p class="card-desc">JSON/XML/text парсинг ответов LLM</p>
+  <div class="card-meta"><span class="card-meta-item">📦 1 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="llm-inference-ops inference провайдеров: latency, throughput">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">llm-inference-ops</h3>
+  <p class="card-desc">Inference провайдеров: latency, throughput</p>
+  <div class="card-meta"><span class="card-meta-item">📦 1 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="gen-ai-provider-ops переключение между провайдерами">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">gen-ai-provider-ops</h3>
+  <p class="card-desc">Переключение между провайдерами</p>
+  <div class="card-meta"><span class="card-meta-item">📦 1 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="huggingface-hub загрузка моделей и датасетов">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">huggingface-hub</h3>
+  <p class="card-desc">Загрузка моделей и датасетов</p>
+  <div class="card-meta"><span class="card-meta-item">📦 1 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="telegram-output-style telegram-style formatter">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">telegram-output-style</h3>
+  <p class="card-desc">Telegram-style formatter</p>
+  <div class="card-meta"><span class="card-meta-item">📦 1 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="kwork-gig-creation генерация кворков с правилами">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">kwork-gig-creation</h3>
+  <p class="card-desc">Генерация кворков с правилами</p>
+  <div class="card-meta"><span class="card-meta-item">📦 1 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="github gh cli: repo, pr, audit operations">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">github</h3>
+  <p class="card-desc">gh CLI: repo, PR, audit operations</p>
+  <div class="card-meta"><span class="card-meta-item">📦 3 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="data-science jupyter live kernel для анализа">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">data-science</h3>
+  <p class="card-desc">Jupyter live kernel для анализа</p>
+  <div class="card-meta"><span class="card-meta-item">📦 1 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="mlops ml ops, hf, openrouter, llm ops">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">mlops</h3>
+  <p class="card-desc">ML ops, HF, OpenRouter, LLM ops</p>
+  <div class="card-meta"><span class="card-meta-item">📦 5 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="note-taking obsidian, knowledge graphs">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">note-taking</h3>
+  <p class="card-desc">Obsidian, knowledge graphs</p>
+  <div class="card-meta"><span class="card-meta-item">📦 3 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="productivity airtable, google workspace, linear, notion, ocr">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">productivity</h3>
+  <p class="card-desc">Airtable, Google Workspace, Linear, Notion, Ocr</p>
+  <div class="card-meta"><span class="card-meta-item">📦 8 tools</span></div>
+</div>
+<div class="card plugin-card" data-search="creative algorithmic art, excalidraw, html-artifact">
+  <div class="card-header">
+    <span class="card-icon">🔌</span>
+    <span class="card-category">plugin</span>
+  </div>
+  <h3 class="card-title">creative</h3>
+  <p class="card-desc">Algorithmic art, excalidraw, html-artifact</p>
+  <div class="card-meta"><span class="card-meta-item">📦 7 tools</span></div>
+</div>
+      </div>
 
     </div>
   </section>
@@ -226,27 +767,9 @@
     </div>
   </footer>
 
-  <!-- Scripts (defer гарантирует порядок data.js → app.js и выполнение после парсинга DOM) -->
+  <!-- Scripts (defer — гарантирует порядок data.js → app.js и выполнение после парсинга DOM) -->
   <script src="scripts/data.js" defer></script>
   <script src="scripts/app.js" defer></script>
-
-  <!-- Inline fallback: если JS не подгрузился за 4с — показать сообщение -->
-  <noscript>
-    <div style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#0a0a0a;color:#fff;padding:20px;text-align:center;z-index:9999;">
-      <div>
-        <h2>Включи JavaScript</h2>
-        <p>Каталог работает на JS. Включи его в настройках браузера и обнови страницу.</p>
-      </div>
-    </div>
-  </noscript>
-  <script>
-    setTimeout(function(){
-      var grid = document.getElementById('grid');
-      if (grid && grid.children.length === 0) {
-        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:#8b949e;"><p>Карточки не загрузились. Попробуй обновить страницу (Ctrl+Shift+R).</p><p style="margin-top:12px;font-size:13px;">Если не поможет — открой в обычном браузере, не внутри Telegram.</p></div>';
-      }
-    }, 4000);
-  </script>
 
 </body>
 </html>

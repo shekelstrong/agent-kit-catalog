@@ -870,3 +870,5 @@ body::before {
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 5px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--fg-muted); }
+/* === Utility === */
+.hidden { display: none !important; }
